@@ -18,14 +18,95 @@
             </r:Ribbon.Background>
 
             <r:Ribbon.ApplicationMenu>
-                <r:RibbonApplicationMenu>
-                    <r:RibbonApplicationMenuItem>
+                <r:RibbonApplicationMenu SmallImageSource="Imagens\img_icone1_16x16.png">
+                    <r:RibbonApplicationMenuItem x:Name="menuLogin" Header="Realizar Login"
+					   ToolTip="Realizar Login no Sistema"
+					   ImageSource="Imagens\img_login_32x32.png"/>
+
+                    <r:RibbonApplicationMenuItem Header="Conexão" ImageSource="imagens\img_usb_32x24.jpg" ToolTip="Realizar a conexão do no Sistema de supervisão com o dispositivo selecionado">
+                        <r:RibbonApplicationMenuItem 
+							ToolTip="Realiza a busca de dispositivos conectados a porta serial do computador"
+							Header="Buscar Dispositivos" ImageSource="imagens\img_buscar_32x32.png"/>
+
+                        <r:RibbonApplicationMenuItem 
+							ToolTip="Realizar a conexão do Sistema de supervisão com o dispositivo selecionada"
+							Header="Conectar" ImageSource="imagens\img_conectar_32x32.png" />
+
+                        <r:RibbonApplicationMenuItem 
+							ToolTip="Desconecta o Sistema de supervisão do dispositivo"
+							Header="Desconectar" ImageSource="imagens\img_desconectar_32x32.png" />
 
                     </r:RibbonApplicationMenuItem>
-                </r:RibbonApplicationMenu> 
+
+                    <r:RibbonApplicationMenuItem Header="Salvar"
+                       ToolTip="Salvar os arquivos de relatório"
+                       ImageSource="imagens\img_salvar_32x32.png">
+
+                    </r:RibbonApplicationMenuItem>
+
+                    <r:RibbonApplicationMenuItem Header="Imprimir relatório"
+					   ToolTip="Realiza a impressão dos relatórios do sistema de supervisão"
+					   ImageSource="Imagens\img_impressora_32x32.png"/>
+
+                    <r:RibbonApplicationMenuItem Header="Sobre o sistema" 
+					   ToolTip="Informações sobre o supervisório"
+					   ImageSource="Imagens\img_informacao_32x32.jpg"/>
+
+                    <r:RibbonApplicationMenuItem Header="Sair"
+					   ToolTip="Encerra a aplicação"
+					   ImageSource="Imagens\img_sair_32x32.png" />
+
+                </r:RibbonApplicationMenu>
             </r:Ribbon.ApplicationMenu>
-           
-            
+
+            <r:RibbonTab Header="Página Inicial">
+                <r:RibbonGroup Header="Login">
+                    <r:RibbonButton Label="Login"
+					   ToolTip="Realizar Login no Sistema"
+					   LargeImageSource="Imagens\img_login_32x32.png">
+                    </r:RibbonButton>
+                </r:RibbonGroup>
+
+                <r:RibbonGroup Header="Conexão">
+                    <r:RibbonButton Label="Buscar"
+                       ToolTip="Realiza a busca de dispositivos conectados a porta serial do computador"
+                       LargeImageSource="imagens\img_buscar_32x32.png">
+                    </r:RibbonButton>
+
+                    <r:RibbonButton Label="Conectar"
+                       ToolTip="Realizar a conexão do no Sistema de supervisão com o dispositivo selecionado"
+                       LargeImageSource="imagens\img_conectar_32x32.png">
+                    </r:RibbonButton>
+
+                    <r:RibbonButton Label="Desconectar"
+                      ToolTip="Desconecta o Sistema de supervisão do dispositivo"
+                       LargeImageSource="imagens\img_desconectar_32x32.png">
+                    </r:RibbonButton>
+                </r:RibbonGroup>
+
+                <r:RibbonGroup Header="Arquivo">
+                    <r:RibbonButton Label="Salvar"
+                       ToolTip="Salvar os arquivos de relatório"
+                       LargeImageSource="imagens\img_salvar_32x32.png">
+
+                    </r:RibbonButton>
+
+                    <r:RibbonButton Label="Abrir relatório"
+                       ToolTip="Realiza a abertura de arquivos de relatórios do sistema de supervisão"
+                       LargeImageSource="Imagens\img_abrir_relatorio_32x32.png">
+                    </r:RibbonButton>
+
+                    <r:RibbonButton Label="Imprimir"
+					   ToolTip="Realiza a impressão dos relatórios do sistema de supervisão"
+					   LargeImageSource="Imagens\img_impressora_32x32.png">
+                    </r:RibbonButton>
+                </r:RibbonGroup>
+
+
+            </r:RibbonTab>
+            <r:RibbonTab Header="RibbonTab" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="1360"/>
+
+
 
         </r:Ribbon>
 

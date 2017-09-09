@@ -100,5 +100,18 @@
   <ItemGroup>
     <Resource Include="Imagens\img_icone1_16x16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\img_abrir_relatorio_32x32.png" />
+    <Resource Include="Imagens\img_buscar_32x32.png" />
+    <Resource Include="Imagens\img_conectar_32x32.png" />
+    <Resource Include="Imagens\img_desconectar_32x32.png" />
+    <Resource Include="Imagens\img_fechar_16x16.png" />
+    <Resource Include="Imagens\img_impressora_32x32.png" />
+    <Resource Include="Imagens\img_informacao_32x32.jpg" />
+    <Resource Include="Imagens\img_login_32x32.png" />
+    <Resource Include="Imagens\img_sair_32x32.png" />
+    <Resource Include="Imagens\img_salvar_32x32.png" />
+    <Resource Include="Imagens\img_usb_32x24.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

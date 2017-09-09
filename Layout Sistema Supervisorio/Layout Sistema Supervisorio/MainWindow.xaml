@@ -9,11 +9,11 @@
         Title="MainWindow" Height="730" Width="1370" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow">
     <Grid>
 
-        <r:Ribbon>
+        <r:Ribbon Foreground="#FF0F0E0D" BorderBrush="#FF0E0603" FocusedBorderBrush="#FFB28D31">
             <r:Ribbon.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFC0CCEC" Offset="1"/>
                 </LinearGradientBrush>
             </r:Ribbon.Background>
 
@@ -105,10 +105,26 @@
 
             </r:RibbonTab>
             <r:RibbonTab Header="RibbonTab" HorizontalAlignment="Left" Height="88" VerticalAlignment="Top" Width="1360"/>
-
-
-
         </r:Ribbon>
+
+        <Grid Margin="5,140,0,5" HorizontalAlignment="Left" Width="299">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+        </Grid>
+
+        <Grid Margin="309,140,5,5">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.004"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+        </Grid>
 
     </Grid>
 </r:RibbonWindow>

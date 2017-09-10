@@ -131,7 +131,7 @@ namespace Layout_Sistema_Supervisorio
                 }
                 #endregion
 
-                // abilita as comboBox
+                // abilita as comandos
                 #region
                 if (serialPortName.Length != 0)
                 {
@@ -140,6 +140,8 @@ namespace Layout_Sistema_Supervisorio
                     comboBoxParity.IsEnabled = true;
                     comboBoxDataBits.IsEnabled = true;
                     comboBoxStopBits.IsEnabled = true;
+
+                    buttonConectar.IsEnabled = true;
                 }
                 else
                 {
@@ -148,10 +150,91 @@ namespace Layout_Sistema_Supervisorio
                     comboBoxParity.IsEnabled = !true;
                     comboBoxDataBits.IsEnabled = !true;
                     comboBoxStopBits.IsEnabled = !true;
+
+                    buttonConectar.IsEnabled = !true;
                 }
                 #endregion
 
             }
+        }
+
+        private void buttonConectar_Click(object sender, RoutedEventArgs e)
+        {
+            // Verifica se a porta já esta aberta, caso esta já esteja sera fechada 
+            if (SerialCom.IsOpen == true) SerialCom.Close();
+
+            // Seta os paraêmetros da serial
+            SerialCom.PortName = comboBoxSerialPortName.Text;
+            SerialCom.BaudRate = Int32.Parse(comboBoxBaudRate.Text);
+            SerialCom.Parity = (Parity)comboBoxParity.SelectedIndex;
+            SerialCom.DataBits = Int32.Parse(comboBoxDataBits.Text);
+            SerialCom.StopBits = (StopBits)comboBoxStopBits.SelectedIndex;
+
+        }
+
+        private void buttonDesconectar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonSair_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+         
+
+        private void checkBoxSerialUsb_Click(object sender, RoutedEventArgs e)
+        {
+            switch (checkBoxSerialUsb.IsChecked)
+            {
+                case true:
+                    checkBoxWifi.IsChecked = false;
+                    checkBoxBluetooth.IsChecked = false;
+                    tabControlComunicacao.SelectedIndex = 0;
+                    buttonBuscar.IsEnabled = true;
+
+                    break;
+                case false:
+                    buttonBuscar.IsEnabled = false;
+                    break;
+            }
+        }
+
+        private void checkBoxWifi_Click(object sender, RoutedEventArgs e)
+        {
+            switch (checkBoxWifi.IsChecked)
+            {
+                case true:
+                    checkBoxSerialUsb.IsChecked = false;
+                    checkBoxBluetooth.IsChecked = false;
+                    tabControlComunicacao.SelectedIndex = 1;
+                    buttonBuscar.IsEnabled = true;
+
+                    break;
+                case false:
+                    buttonBuscar.IsEnabled = false;
+                    break;
+            }
+
+        }
+
+        private void checkBoxBluetooth_Click(object sender, RoutedEventArgs e)
+        {
+            switch (checkBoxBluetooth.IsChecked)
+            {
+                case true:
+                    checkBoxSerialUsb.IsChecked = false;
+                    checkBoxWifi.IsChecked = false;
+                    tabControlComunicacao.SelectedIndex = 2;
+                    buttonBuscar.IsEnabled = true;
+
+                    break;
+                case false:
+                    buttonBuscar.IsEnabled = false;
+                    break;
+            }
+
         }
     }
 }

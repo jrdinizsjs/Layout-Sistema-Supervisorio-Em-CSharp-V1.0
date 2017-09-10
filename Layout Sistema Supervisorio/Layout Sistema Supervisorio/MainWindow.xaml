@@ -130,7 +130,7 @@
                                 <GradientStop Color="#FF0633CD" Offset="1"/>
                             </LinearGradientBrush>
                         </Grid.Background>
-                        <TabControl x:Name="tabControl" Margin="10,80,10,0" FontWeight="Bold"
+                        <TabControl x:Name="tabControlComunicacao" Margin="10,80,10,0" FontWeight="Bold"
  FontStyle="Italic" Height="223" VerticalAlignment="Top" FontSize="14">
                             <TabItem Header="Serial-USB" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Width="277">
                                 <TabItem.Background>
@@ -232,14 +232,13 @@
 
                                 </Grid.RowDefinitions>
                                 <CheckBox Grid.Column="0" x:Name="checkBoxSerialUsb" 
-										Foreground="#FFF5ECEC" Content="Serial-USB" VerticalContentAlignment="Center" HorizontalAlignment="Center" IsChecked="True"/>
+										Foreground="#FFF5ECEC" Content="Serial-USB" VerticalContentAlignment="Center" HorizontalAlignment="Center" Click="checkBoxSerialUsb_Click"/>
 
                                 <CheckBox Grid.Column="1" x:Name="checkBoxWifi" 
-										Foreground="#FFF5ECEC" Content="Wifi" VerticalContentAlignment="Center" HorizontalAlignment="Center">
-                                </CheckBox>
+										Foreground="#FFF5ECEC" Content="Wifi" VerticalContentAlignment="Center" HorizontalAlignment="Center" Click="checkBoxWifi_Click"/>
 
                                 <CheckBox Grid.Column="2" x:Name="checkBoxBluetooth" 
-										Foreground="#FFF5ECEC" Content="Bluetooth" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
+										Foreground="#FFF5ECEC" Content="Bluetooth" VerticalContentAlignment="Center" HorizontalAlignment="Center" Click="checkBoxBluetooth_Click"/>
                             </Grid>
 
                         </GroupBox>
@@ -267,10 +266,10 @@
                     <RowDefinition Height="1*" />
 
                 </Grid.RowDefinitions>
-                <Button Grid.Column="0" x:Name="buttonBuscar" Content="Buscar" Height="40" FontStyle="Italic" FontWeight="Bold" FontSize="14" BorderThickness="2" BorderBrush="#FF060606" Width="142" Click="buttonBuscar_Click" />
-                <Button Grid.Column="1" x:Name="buttonConectar" Content="Conectar" Width="142" Height="40" FontWeight="Bold" FontStyle="Italic" FontSize="14" BorderThickness="2" BorderBrush="#FF060606" />
-                <Button Grid.Row="1" x:Name="buttonDesconectar" Content="Desconectar" Width="142" Height="40" FontWeight="Bold" FontStyle="Italic" FontSize="14" BorderThickness="2" BorderBrush="#FF060606" />
-                <Button Grid.Column="1" Grid.Row="1"  x:Name="buttonSair" Content="Sair" Width="142" Height="40" FontSize="14" FontStyle="Italic" FontWeight="Bold" BorderThickness="2" BorderBrush="#FF060606" />
+                <Button Grid.Column="0" x:Name="buttonBuscar" Content="Buscar" Height="40" FontStyle="Italic" FontWeight="Bold" FontSize="14" BorderThickness="2" BorderBrush="#FF060606" Width="142" Click="buttonBuscar_Click" IsEnabled="False" />
+                <Button Grid.Column="1" x:Name="buttonConectar" Content="Conectar" Width="142" Height="40" FontWeight="Bold" FontStyle="Italic" FontSize="14" BorderThickness="2" BorderBrush="#FF060606" Click="buttonConectar_Click" IsEnabled="False" />
+                <Button Grid.Row="1" x:Name="buttonDesconectar" Content="Desconectar" Width="142" Height="40" FontWeight="Bold" FontStyle="Italic" FontSize="14" BorderThickness="2" BorderBrush="#FF060606" Click="buttonDesconectar_Click" IsEnabled="False" />
+                <Button Grid.Column="1" Grid.Row="1"  x:Name="buttonSair" Content="Sair" Width="142" Height="40" FontSize="14" FontStyle="Italic" FontWeight="Bold" BorderThickness="2" BorderBrush="#FF060606" Click="buttonSair_Click" IsEnabled="False" />
             </Grid>
             <TabControl x:Name="tabControl2" Margin="329,10,10,116" BorderThickness="2" BorderBrush="#FFF0EAEA" FontWeight="Bold" FontStyle="Italic" FontSize="14">
                 <TabItem Header="TabItem">

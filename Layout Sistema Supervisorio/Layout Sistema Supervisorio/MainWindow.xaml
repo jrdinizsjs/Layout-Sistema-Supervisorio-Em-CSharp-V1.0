@@ -121,7 +121,7 @@
                     <GradientStop Color="#FFFBFBFB" Offset="0.934"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <TabControl x:Name="tabControl1" HorizontalAlignment="Left" Width="303" Margin="5,5,0,116">
+            <TabControl x:Name="tabControl1" HorizontalAlignment="Left" Width="319" Margin="5,5,0,116" Background="White" FontWeight="Bold" FontStyle="Italic" FontSize="14">
                 <TabItem Header="Comunicação" FontWeight="Bold" FontStyle="Italic">
                     <Grid>
                         <Grid.Background>
@@ -130,8 +130,14 @@
                                 <GradientStop Color="#FF0633CD" Offset="1"/>
                             </LinearGradientBrush>
                         </Grid.Background>
-                        <TabControl x:Name="tabControl" Margin="10,110,10,11" FontWeight="Bold" FontStyle="Italic" Height="205" VerticalAlignment="Top">
-                            <TabItem Header="Comunicação Serial" FontWeight="Bold" FontStyle="Italic">
+                        <TabControl x:Name="tabControl" Margin="10,80,10,0" FontWeight="Bold" FontStyle="Italic" Height="223" VerticalAlignment="Top" FontSize="14">
+                            <TabItem Header="Serial-USB" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" Width="277">
+                                <TabItem.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="Black" Offset="1"/>
+                                        <GradientStop Color="#FF52B92B" Offset="0.502"/>
+                                    </LinearGradientBrush>
+                                </TabItem.Background>
                                 <Grid>
                                     <Grid.Background>
                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -139,12 +145,12 @@
                                             <GradientStop Color="#FF42F50D" Offset="0.004"/>
                                         </LinearGradientBrush>
                                     </Grid.Background>
-                                    <Label x:Name="label" Content="Serial Port" Margin="5,5,172,0" VerticalAlignment="Top" Foreground="#FF02020F" Background="#FFE2D3D3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF190707" BorderThickness="1"/>
-                                    <Label x:Name="label_Copy" Content="Baud Rate" Margin="5,38,172,0" VerticalAlignment="Top" Foreground="#FF02020F" Background="#FFE2D3D3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF190707" BorderThickness="1"/>
-                                    <Label x:Name="label_Copy1" Content="Parity" Margin="5,70,172,0" VerticalAlignment="Top" Foreground="#FF02020F" Background="#FFE2D3D3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF190707" BorderThickness="1"/>
-                                    <Label x:Name="label_Copy2" Content="Data Bits" Margin="5,103,172,0" VerticalAlignment="Top" Foreground="#FF02020F" Background="#FFE2D3D3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF190707" BorderThickness="1"/>
-                                    <Label x:Name="label_Copy3" Content="Stop Bits" Margin="5,136,172,0" VerticalAlignment="Top" Foreground="#FF02020F" Background="#FFE2D3D3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF190707" BorderThickness="1"/>
-                                    <ComboBox x:Name="comboBox" Margin="104,5,38,0" VerticalAlignment="Top" Height="28" BorderThickness="2" BorderBrush="#FF130202">
+                                    <Label x:Name="label" Content="Serial Port" Margin="5,5,0,0" VerticalAlignment="Top" Foreground="#FF02020F" Background="#FFE2D3D3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF190707" BorderThickness="1" Height="28" HorizontalAlignment="Left" Width="104"/>
+                                    <Label x:Name="label_Copy" Content="Baud Rate" Margin="5,38,0,0" VerticalAlignment="Top" Foreground="#FF02020F" Background="#FFE2D3D3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF190707" BorderThickness="1" HorizontalAlignment="Left" Width="104" Height="28"/>
+                                    <Label x:Name="label_Copy1" Content="Parity" Margin="5,70,0,0" VerticalAlignment="Top" Foreground="#FF02020F" Background="#FFE2D3D3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF190707" BorderThickness="1" HorizontalAlignment="Left" Width="104" Height="28"/>
+                                    <Label x:Name="label_Copy2" Content="Data Bits" Margin="5,103,0,0" VerticalAlignment="Top" Foreground="#FF02020F" Background="#FFE2D3D3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF190707" BorderThickness="1" HorizontalAlignment="Left" Width="104" Height="28"/>
+                                    <Label x:Name="label_Copy3" Content="Stop Bits" Margin="5,136,0,0" VerticalAlignment="Top" Foreground="#FF02020F" Background="#FFE2D3D3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FF190707" BorderThickness="1" HorizontalAlignment="Left" Width="104" Height="28"/>
+                                    <ComboBox x:Name="comboBox" Margin="114,5,0,0" VerticalAlignment="Top" Height="28" BorderThickness="2" BorderBrush="#FF130202" HorizontalAlignment="Left" Width="136">
                                         <ComboBox.Background>
                                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -152,8 +158,8 @@
                                             </LinearGradientBrush>
                                         </ComboBox.Background>
                                     </ComboBox>
-                                    <Button x:Name="button" Content="?" Height="28" Margin="238,5,6,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <ComboBox x:Name="comboBox_Copy" Margin="104,38,38,0" VerticalAlignment="Top" Height="28" BorderThickness="2" BorderBrush="#FF130202">
+                                    <Button x:Name="button" Content="?" Height="28" Margin="255,5,0,0" VerticalAlignment="Top" FontSize="16" HorizontalAlignment="Left" Width="27"/>
+                                    <ComboBox x:Name="comboBox_Copy" Margin="114,38,0,0" VerticalAlignment="Top" Height="28" BorderThickness="2" BorderBrush="#FF130202" HorizontalAlignment="Left" Width="136">
                                         <ComboBox.Background>
                                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -161,8 +167,8 @@
                                             </LinearGradientBrush>
                                         </ComboBox.Background>
                                     </ComboBox>
-                                    <Button x:Name="button_Copy" Content="?" Height="28" Margin="238,38,6,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <ComboBox x:Name="comboBox_Copy1" Margin="104,70,38,0" VerticalAlignment="Top" Height="28" BorderThickness="2" BorderBrush="#FF130202">
+                                    <Button x:Name="button_Copy" Content="?" Height="28" Margin="255,38,0,0" VerticalAlignment="Top" FontSize="16" HorizontalAlignment="Left" Width="27"/>
+                                    <ComboBox x:Name="comboBox_Copy1" Margin="114,70,0,0" VerticalAlignment="Top" Height="28" BorderThickness="2" BorderBrush="#FF130202" HorizontalAlignment="Left" Width="136">
                                         <ComboBox.Background>
                                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -170,8 +176,8 @@
                                             </LinearGradientBrush>
                                         </ComboBox.Background>
                                     </ComboBox>
-                                    <Button x:Name="button_Copy1" Content="?" Height="28" Margin="238,70,6,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <ComboBox x:Name="comboBox_Copy2" Margin="104,103,38,0" VerticalAlignment="Top" Height="28" BorderThickness="2" BorderBrush="#FF130202">
+                                    <Button x:Name="button_Copy1" Content="?" Height="28" Margin="255,70,0,0" VerticalAlignment="Top" FontSize="16" HorizontalAlignment="Left" Width="27"/>
+                                    <ComboBox x:Name="comboBox_Copy2" Margin="114,103,0,0" VerticalAlignment="Top" Height="28" BorderThickness="2" BorderBrush="#FF130202" HorizontalAlignment="Left" Width="136">
                                         <ComboBox.Background>
                                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -179,8 +185,8 @@
                                             </LinearGradientBrush>
                                         </ComboBox.Background>
                                     </ComboBox>
-                                    <Button x:Name="button_Copy2" Content="?" Height="28" Margin="238,103,6,0" VerticalAlignment="Top" FontSize="16"/>
-                                    <ComboBox x:Name="comboBox_Copy3" Margin="104,136,38,0" VerticalAlignment="Top" Height="28" BorderThickness="2" BorderBrush="#FF130202">
+                                    <Button x:Name="button_Copy2" Content="?" Height="28" Margin="255,103,0,0" VerticalAlignment="Top" FontSize="16" HorizontalAlignment="Left" Width="27"/>
+                                    <ComboBox x:Name="comboBox_Copy3" Margin="114,136,0,0" VerticalAlignment="Top" Height="28" BorderThickness="2" BorderBrush="#FF130202" HorizontalAlignment="Left" Width="136">
                                         <ComboBox.Background>
                                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -188,52 +194,62 @@
                                             </LinearGradientBrush>
                                         </ComboBox.Background>
                                     </ComboBox>
-                                    <Button x:Name="button_Copy3" Content="?" Height="28" Margin="238,136,6,0" VerticalAlignment="Top" FontSize="16"/>
+                                    <Button x:Name="button_Copy3" Content="?" Height="28" Margin="255,136,0,0" VerticalAlignment="Top" FontSize="16" HorizontalAlignment="Left" Width="27"/>
                                 </Grid>
                             </TabItem>
-                            <TabItem Header="Comunicação Wifi">
+                            <TabItem Header="Wifi">
+                                <TabItem.Background>
+                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                        <GradientStop Color="#FFDE351B" Offset="0.349"/>
+                                        <GradientStop Color="#FFE2E1F0" Offset="0.815"/>
+                                    </LinearGradientBrush>
+                                </TabItem.Background>
                                 <Grid Background="#FFE5E5E5"/>
                             </TabItem>
+                            <TabItem Content="" Header="Bluetooth">
+                                <TabItem.Background>
+                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                        <GradientStop Color="#FFBDBECD" Offset="0.506"/>
+                                        <GradientStop Color="#FF151EDC" Offset="0.996"/>
+                                    </LinearGradientBrush>
+                                </TabItem.Background>
+                            </TabItem>
                         </TabControl>
-                        <GroupBox x:Name="groupBox" Header="Tipo da Comunicação" Height="92"
+                        <GroupBox x:Name="groupBox" Header="Tipo da Comunicação" Height="57"
                                   Margin="10,10,10,0" VerticalAlignment="Top" 
-                                  Foreground="#FFF0E2E2" BorderBrush="#FFF2F5F7">
+                                  Foreground="#FFF0E2E2" BorderBrush="#FFF2F5F7" FontSize="14">
 
 
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="1*" />
                                     <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="1*" />
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="1*" />
-                                    <RowDefinition Height="1*" />
+
                                 </Grid.RowDefinitions>
                                 <CheckBox Grid.Column="0" x:Name="checkBoxSerialUsb" 
-                                          Foreground="#FFF5ECEC" Content="Serial-USB" VerticalContentAlignment="Center"/>
+                                          Foreground="#FFF5ECEC" Content="Serial-USB" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
 
                                 <CheckBox Grid.Column="1" x:Name="checkBoxWifi" 
-                                          Foreground="#FFF5ECEC" Content="Wifi" VerticalContentAlignment="Center">
+                                          Foreground="#FFF5ECEC" Content="Wifi" VerticalContentAlignment="Center" HorizontalAlignment="Center">
                                 </CheckBox>
 
-                                <CheckBox Grid.Row="1" x:Name="checkBoxBluetooth" 
-                                          Foreground="#FFF5ECEC" Content="Bluetooth" VerticalContentAlignment="Center">
-                                </CheckBox>
-
-                                <CheckBox Grid.Column="1" Grid.Row="1" x:Name="checkBox4" 
-                                          Foreground="#FFF5ECEC" Content="Serial-USB" VerticalContentAlignment="Center">
-                                </CheckBox>
+                                <CheckBox Grid.Column="2" x:Name="checkBoxBluetooth" 
+                                          Foreground="#FFF5ECEC" Content="Bluetooth" VerticalContentAlignment="Center" HorizontalAlignment="Center"/>
                             </Grid>
 
                         </GroupBox>
-                        <Canvas HorizontalAlignment="Left" Margin="10,320,0,5" Width="204" Background="Black"/>
+                        <Canvas HorizontalAlignment="Left" Margin="10,308,0,5" Width="293" Background="Black"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Controle">
                     <Grid Background="#FFE5E5E5"/>
                 </TabItem>
             </TabControl>
-            <Grid HorizontalAlignment="Left" Height="106" Margin="5,0,0,5" VerticalAlignment="Bottom" Width="303">
+            <Grid HorizontalAlignment="Left" Height="106" Margin="5,0,0,5" VerticalAlignment="Bottom" Width="319">
                 <Grid.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black" Offset="0"/>
@@ -254,6 +270,29 @@
                 <Button Grid.Column="1" x:Name="buttonConectar" Content="Conectar" Width="142" Height="40" FontWeight="Bold" FontStyle="Italic" FontSize="14" BorderThickness="2" BorderBrush="#FF060606" />
                 <Button Grid.Row="1" x:Name="buttonDesconectar" Content="Desconectar" Width="142" Height="40" FontWeight="Bold" FontStyle="Italic" FontSize="14" BorderThickness="2" BorderBrush="#FF060606" />
                 <Button Grid.Column="1" Grid.Row="1"  x:Name="buttonSair" Content="Sair" Width="142" Height="40" FontSize="14" FontStyle="Italic" FontWeight="Bold" BorderThickness="2" BorderBrush="#FF060606" />
+            </Grid>
+            <TabControl x:Name="tabControl2" Margin="329,10,10,116" BorderThickness="2" BorderBrush="#FFF0EAEA" FontWeight="Bold" FontStyle="Italic" FontSize="14">
+                <TabItem Header="TabItem">
+                    <Grid>
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0"/>
+                                <GradientStop Color="#FFF51414" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="TabItem">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
+            <Grid Margin="329,0,10,5" Height="106" VerticalAlignment="Bottom">
+                <Grid.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF0633CD" Offset="1"/>
+                    </LinearGradientBrush>
+                </Grid.Background>
             </Grid>
 
 
